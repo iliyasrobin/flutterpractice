@@ -67,6 +67,17 @@ class HomeActivity extends StatelessWidget{
           BottomNavigationBarItem(icon: Icon(Icons.person), label: "Profile"),
 
         ],
+        onTap: (int index){
+          if(index==0){
+            MySnackBar("Home", context);
+          }
+          if(index==1){
+            MySnackBar("Contact", context);
+          }
+          if(index==2){
+            MySnackBar("profile", context);
+          }
+        },
       ),
 
 
