@@ -82,6 +82,7 @@ class HomeActivity extends StatelessWidget{
 
 
     );
-  }
+  } 
+//will add drawer
 
 }
