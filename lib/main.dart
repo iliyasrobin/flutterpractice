@@ -79,10 +79,61 @@ class HomeActivity extends StatelessWidget{
           }
         },
       ),
+      drawer: Drawer(
+        child: ListView(
+          children: [
+
+            DrawerHeader(
+                padding: EdgeInsets.all(0),
+                child: UserAccountsDrawerHeader(
+
+                  currentAccountPicture: Image.network("https://media.istockphoto.com/id/1045035708/vector/duckling-simple-vector-icon.webp?s=2048x2048&w=is&k=20&c=Qx8IwvfRPlQoaElvo3oqs6cT7UFOLuD2ADjErUl_nS4="),
+                decoration: BoxDecoration(color: Colors.blue),
+
+                accountName: Text("ILIYAS AHMED", style: TextStyle(color: Colors.black87)),
+                accountEmail: Text("iliyasahmedr@gmail.com"),
+            )
+            ),
+            ListTile(leading: Icon(Icons.home) , title: Text("Home"), onTap: (){MySnackBar("Home End Drawer", context);},),
+            ListTile(leading: Icon(Icons.contact_emergency) ,title: Text("Contact Us"),onTap: (){MySnackBar("Contact End Drawer", context);}),
+            ListTile(leading: Icon(Icons.phone) ,title: Text("Phone"),onTap: (){MySnackBar("Phone End Drawer", context);}),
+            ListTile(leading: Icon(Icons.email) ,title: Text("Email"),onTap: (){MySnackBar("Email End Drawer", context);}),
+          ],
+        ),
+      ),
+      endDrawer: Drawer(
+        child: ListView(
+          children: [
+
+            DrawerHeader(
+                padding: EdgeInsets.all(0),
+                child: UserAccountsDrawerHeader(
+
+                  currentAccountPicture: Image.network("https://media.istockphoto.com/id/1045035708/vector/duckling-simple-vector-icon.webp?s=2048x2048&w=is&k=20&c=Qx8IwvfRPlQoaElvo3oqs6cT7UFOLuD2ADjErUl_nS4="),
+                  decoration: BoxDecoration(color: Colors.blue),
+
+                  accountName: Text("ILIYAS AHMED", style: TextStyle(color: Colors.black87)),
+                  accountEmail: Text("iliyasahmedr@gmail.com"),
+                )
+            ),
+            ListTile(leading: Icon(Icons.home) , title: Text("Home"), onTap: (){MySnackBar("Home End Drawer", context);},),
+            ListTile(leading: Icon(Icons.contact_emergency) ,title: Text("Contact Us"),onTap: (){MySnackBar("Contact End Drawer", context);}),
+            ListTile(leading: Icon(Icons.phone) ,title: Text("Phone"),onTap: (){MySnackBar("Phone End Drawer", context);}),
+            ListTile(leading: Icon(Icons.email) ,title: Text("Email"),onTap: (){MySnackBar("Email End Drawer", context);}),
+          ],
+        ),
+      ),
+      body: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: [
+          Container(height: 100, width: 100, child: Image.network("https://hips.hearstapps.com/hmg-prod/images/how-to-keep-ducks-call-ducks-1615457181.jpg")),
+          Container(height: 100, width: 100, child: Image.network("https://hips.hearstapps.com/hmg-prod/images/how-to-keep-ducks-call-ducks-1615457181.jpg")),
+          Container(height: 100, width: 100, child: Image.network("https://hips.hearstapps.com/hmg-prod/images/how-to-keep-ducks-call-ducks-1615457181.jpg"))
+        ],
+      ),
 
 
     );
-  } 
-//will add drawer
+  }
 
 }
