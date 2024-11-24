@@ -31,9 +31,52 @@ class HomeActivity extends StatelessWidget{
   );
 }
 
+  MyAlertDialogue(context){
+    showDialog(
+        context: context,
+        builder: (BuildContext context){
+          return Expanded(child: AlertDialog(
+            title: Text("Alert!"),
+            content: Text("do you want to proceed?"),
+            actions: [
+              TextButton(onPressed: (){
+                MySnackBar("Proceeded", context);
+                Navigator.of(context).pop();
+              }, child: Text("Yes")),
+
+              TextButton(onPressed: (){Navigator.of(context).pop();}, child: Text("No")),
+            ],
+
+          ),
+          );
+    }
+    );
+  }
+
+
 
   @override
   Widget build(BuildContext context) {
+
+    // //button styling
+    // ButtonStyle buttonStyle= ElevatedButton.styleFrom(
+    //   padding: EdgeInsets.all(20),
+    //   foregroundColor: Colors.white,
+    //   backgroundColor: Colors.green,
+    //   shape: RoundedRectangleBorder(
+    //       borderRadius: BorderRadius.all(Radius.circular(1)),
+    // ));
+    // ButtonStyle buttonStyle2= TextButton.styleFrom(
+    //     padding: EdgeInsets.all(20),
+    //     foregroundColor: Colors.white,
+    //     backgroundColor: Colors.red,
+    //     shape: RoundedRectangleBorder(
+    //       borderRadius: BorderRadius.all(Radius.circular(1)),
+    //     ));
+
+
+
+
     return  Scaffold(
       appBar: AppBar(
        title: Text("bKash App"),
@@ -88,10 +131,10 @@ class HomeActivity extends StatelessWidget{
                 child: UserAccountsDrawerHeader(
 
                   currentAccountPicture: Image.network("https://media.istockphoto.com/id/1045035708/vector/duckling-simple-vector-icon.webp?s=2048x2048&w=is&k=20&c=Qx8IwvfRPlQoaElvo3oqs6cT7UFOLuD2ADjErUl_nS4="),
-                decoration: BoxDecoration(color: Colors.blue),
+                  decoration: BoxDecoration(color: Colors.blue),
 
-                accountName: Text("ILIYAS AHMED", style: TextStyle(color: Colors.black87)),
-                accountEmail: Text("iliyasahmedr@gmail.com"),
+                  accountName: Text("ILIYAS AHMED", style: TextStyle(color: Colors.black87)),
+                  accountEmail: Text("iliyasahmedr@gmail.com"),
             )
             ),
             ListTile(leading: Icon(Icons.home) , title: Text("Home"), onTap: (){MySnackBar("Home End Drawer", context);},),
@@ -101,36 +144,69 @@ class HomeActivity extends StatelessWidget{
           ],
         ),
       ),
-      endDrawer: Drawer(
-        child: ListView(
-          children: [
 
-            DrawerHeader(
-                padding: EdgeInsets.all(0),
-                child: UserAccountsDrawerHeader(
+      //end Drawer
 
-                  currentAccountPicture: Image.network("https://media.istockphoto.com/id/1045035708/vector/duckling-simple-vector-icon.webp?s=2048x2048&w=is&k=20&c=Qx8IwvfRPlQoaElvo3oqs6cT7UFOLuD2ADjErUl_nS4="),
-                  decoration: BoxDecoration(color: Colors.blue),
+      // endDrawer: Drawer(
+      //   child: ListView(
+      //     children: [
+      //
+      //       DrawerHeader(
+      //           padding: EdgeInsets.all(0),
+      //           child: UserAccountsDrawerHeader(
+      //
+      //             currentAccountPicture: Image.network("https://media.istockphoto.com/id/1045035708/vector/duckling-simple-vector-icon.webp?s=2048x2048&w=is&k=20&c=Qx8IwvfRPlQoaElvo3oqs6cT7UFOLuD2ADjErUl_nS4="),
+      //             decoration: BoxDecoration(color: Colors.blue),
+      //
+      //             accountName: Text("ILIYAS AHMED", style: TextStyle(color: Colors.black87)),
+      //             accountEmail: Text("iliyasahmedr@gmail.com"),
+      //           )
+      //       ),
+      //       ListTile(leading: Icon(Icons.home) , title: Text("Home"), onTap: (){MySnackBar("Home End Drawer", context);},),
+      //       ListTile(leading: Icon(Icons.contact_emergency) ,title: Text("Contact Us"),onTap: (){MySnackBar("Contact End Drawer", context);}),
+      //       ListTile(leading: Icon(Icons.phone) ,title: Text("Phone"),onTap: (){MySnackBar("Phone End Drawer", context);}),
+      //       ListTile(leading: Icon(Icons.email) ,title: Text("Email"),onTap: (){MySnackBar("Email End Drawer", context);}),
+      //     ],
+      //   ),
+      // ),
 
-                  accountName: Text("ILIYAS AHMED", style: TextStyle(color: Colors.black87)),
-                  accountEmail: Text("iliyasahmedr@gmail.com"),
-                )
-            ),
-            ListTile(leading: Icon(Icons.home) , title: Text("Home"), onTap: (){MySnackBar("Home End Drawer", context);},),
-            ListTile(leading: Icon(Icons.contact_emergency) ,title: Text("Contact Us"),onTap: (){MySnackBar("Contact End Drawer", context);}),
-            ListTile(leading: Icon(Icons.phone) ,title: Text("Phone"),onTap: (){MySnackBar("Phone End Drawer", context);}),
-            ListTile(leading: Icon(Icons.email) ,title: Text("Email"),onTap: (){MySnackBar("Email End Drawer", context);}),
-          ],
-        ),
-      ),
-      body: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        children: [
-          Container(height: 100, width: 100, child: Image.network("https://hips.hearstapps.com/hmg-prod/images/how-to-keep-ducks-call-ducks-1615457181.jpg")),
-          Container(height: 100, width: 100, child: Image.network("https://hips.hearstapps.com/hmg-prod/images/how-to-keep-ducks-call-ducks-1615457181.jpg")),
-          Container(height: 100, width: 100, child: Image.network("https://hips.hearstapps.com/hmg-prod/images/how-to-keep-ducks-call-ducks-1615457181.jpg"))
-        ],
-      ),
+      //row
+
+      // body: Row(
+      //   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      //   children: [
+      //     Container(height: 100, width: 100, child: Image.network("https://hips.hearstapps.com/hmg-prod/images/how-to-keep-ducks-call-ducks-1615457181.jpg")),
+      //     Container(height: 100, width: 100, child: Image.network("https://hips.hearstapps.com/hmg-prod/images/how-to-keep-ducks-call-ducks-1615457181.jpg")),
+      //     Container(height: 100, width: 100, child: Image.network("https://hips.hearstapps.com/hmg-prod/images/how-to-keep-ducks-call-ducks-1615457181.jpg"))
+      //   ],
+      // )
+
+      //column
+
+      // body: Column(
+      //   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+      //   children: [
+      //     Container(height: 100, width: 100, child: Image.network("https://hips.hearstapps.com/hmg-prod/images/how-to-keep-ducks-call-ducks-1615457181.jpg")),
+      //     Container(height: 100, width: 100, child: Image.network("https://hips.hearstapps.com/hmg-prod/images/how-to-keep-ducks-call-ducks-1615457181.jpg")),
+      //     Container(height: 100, width: 100, child: Image.network("https://hips.hearstapps.com/hmg-prod/images/how-to-keep-ducks-call-ducks-1615457181.jpg"))
+      //   ],
+      // ),
+
+
+
+      //alert
+
+      // body: Center(
+      //  child:  ElevatedButton(onPressed: (){MyAlertDialogue(context);}, child: Text("Alert !")),
+      // )
+      //
+
+      //Form
+
+
+
+
+
 
 
     );
