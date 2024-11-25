@@ -205,7 +205,7 @@ class HomeActivity extends StatelessWidget{
 
 
 
-
+body: Column()
 
 
 
