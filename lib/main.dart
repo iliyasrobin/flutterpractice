@@ -77,6 +77,7 @@ class HomeActivity extends StatelessWidget{
     ButtonStyle buttonStyle3 =ElevatedButton.styleFrom(
     padding: const EdgeInsets.all(20),
     backgroundColor: Colors.green,
+      minimumSize : Size(double.infinity, 60),
 
   );
 
