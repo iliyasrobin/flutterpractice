@@ -74,6 +74,12 @@ class HomeActivity extends StatelessWidget{
     //       borderRadius: BorderRadius.all(Radius.circular(1)),
     //     ));
 
+    ButtonStyle buttonStyle3 =ElevatedButton.styleFrom(
+    padding: const EdgeInsets.all(20),
+    backgroundColor: Colors.green,
+
+  );
+
 
 
 
@@ -202,10 +208,15 @@ class HomeActivity extends StatelessWidget{
       //
 
       //Form
-
-
-
-body: Column()
+       body: Column(
+        mainAxisAlignment: MainAxisAlignment.start,
+        children: [
+          Padding(padding: EdgeInsets.all(20), child: TextField(decoration: InputDecoration(border: OutlineInputBorder(), labelText: 'First Name'),),),
+          Padding(padding: EdgeInsets.all(20), child: TextField(decoration: InputDecoration(border: OutlineInputBorder(), labelText: 'Last Name'),),),
+          Padding(padding: EdgeInsets.all(20), child: TextField(decoration: InputDecoration(border: OutlineInputBorder(), labelText: 'Email Name'),),),
+          ElevatedButton(onPressed: (){}, child: Text("Submit"), style: buttonStyle3)
+        ],
+      ),
 
 
 
