@@ -23,13 +23,22 @@ class MyApp extends StatelessWidget{
 }
 
 class HomeActivity extends StatelessWidget{
-  const HomeActivity({super.key});
+   HomeActivity({super.key});
 
   MySnackBar(msg, context){
   return ScaffoldMessenger.of(context).showSnackBar(
     SnackBar(content: Text(msg))
   );
 }
+
+var MyItems = [
+    {"img": "https://upload.wikimedia.org/wikipedia/commons/b/bf/Bucephala-albeola-010.jpg", "title":"Iliyas"},
+    {"img": "https://upload.wikimedia.org/wikipedia/commons/b/bf/Bucephala-albeola-010.jpg", "title":"Iliyas"},
+    {"img": "https://upload.wikimedia.org/wikipedia/commons/b/bf/Bucephala-albeola-010.jpg", "title":"Iliyas"},
+    {"img": "https://upload.wikimedia.org/wikipedia/commons/b/bf/Bucephala-albeola-010.jpg", "title":"Iliyas"},
+    {"img": "https://upload.wikimedia.org/wikipedia/commons/b/bf/Bucephala-albeola-010.jpg", "title":"Iliyas"},
+  ];
+  
 
   MyAlertDialogue(context){
     showDialog(
@@ -217,6 +226,23 @@ class HomeActivity extends StatelessWidget{
           Padding(padding: EdgeInsets.all(20), child: TextField(decoration: InputDecoration(border: OutlineInputBorder(), labelText: 'Email Name'),),),
           ElevatedButton(onPressed: (){}, child: Text("Submit"), style: buttonStyle3)
         ],
+      ),
+
+
+      //Dynamic List view Builder
+      body: ListView.builder(
+          itemCount: MyItems.length,
+          itemBuilder: (context,index){
+            return GestureDetector(
+              onTap: (){},
+              child: Container(
+                margin: EdgeInsets.all(20),
+                width: double.infinity,
+                height: 200,
+                child: Image.network(MyItems[index]['img']!),
+              ),
+            );
+          },
       ),
 
 
