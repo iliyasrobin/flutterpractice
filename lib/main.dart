@@ -67,21 +67,21 @@ var MyItems = [
   @override
   Widget build(BuildContext context) {
 
-    // //button styling
-    // ButtonStyle buttonStyle= ElevatedButton.styleFrom(
-    //   padding: EdgeInsets.all(20),
-    //   foregroundColor: Colors.white,
-    //   backgroundColor: Colors.green,
-    //   shape: RoundedRectangleBorder(
-    //       borderRadius: BorderRadius.all(Radius.circular(1)),
-    // ));
-    // ButtonStyle buttonStyle2= TextButton.styleFrom(
-    //     padding: EdgeInsets.all(20),
-    //     foregroundColor: Colors.white,
-    //     backgroundColor: Colors.red,
-    //     shape: RoundedRectangleBorder(
-    //       borderRadius: BorderRadius.all(Radius.circular(1)),
-    //     ));
+    //button styling
+    ButtonStyle buttonStyle= ElevatedButton.styleFrom(
+      padding: EdgeInsets.all(20),
+      foregroundColor: Colors.white,
+      backgroundColor: Colors.green,
+      shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.all(Radius.circular(1)),
+    ));
+    ButtonStyle buttonStyle2= TextButton.styleFrom(
+        padding: EdgeInsets.all(20),
+        foregroundColor: Colors.white,
+        backgroundColor: Colors.red,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.all(Radius.circular(1)),
+        ));
 
     ButtonStyle buttonStyle3 =ElevatedButton.styleFrom(
     padding: const EdgeInsets.all(20),
@@ -94,6 +94,7 @@ var MyItems = [
 
 
     return  Scaffold(
+      //appBar
       appBar: AppBar(
        title: Text("bKash App"),
        backgroundColor: Colors.green,
@@ -109,6 +110,7 @@ var MyItems = [
        
 
      ),
+      //floatingActionButton
       floatingActionButton: FloatingActionButton(
         elevation: 10,
         child: Icon(Icons.add),
@@ -117,6 +119,8 @@ var MyItems = [
           
         },
       ),
+
+      //bottomNavigationBar
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: 0,
         backgroundColor: Colors.green,
@@ -138,6 +142,8 @@ var MyItems = [
           }
         },
       ),
+
+      //drawer
       drawer: Drawer(
         child: ListView(
           children: [
@@ -163,59 +169,59 @@ var MyItems = [
 
       //end Drawer
 
-      // endDrawer: Drawer(
-      //   child: ListView(
-      //     children: [
-      //
-      //       DrawerHeader(
-      //           padding: EdgeInsets.all(0),
-      //           child: UserAccountsDrawerHeader(
-      //
-      //             currentAccountPicture: Image.network("https://media.istockphoto.com/id/1045035708/vector/duckling-simple-vector-icon.webp?s=2048x2048&w=is&k=20&c=Qx8IwvfRPlQoaElvo3oqs6cT7UFOLuD2ADjErUl_nS4="),
-      //             decoration: BoxDecoration(color: Colors.blue),
-      //
-      //             accountName: Text("ILIYAS AHMED", style: TextStyle(color: Colors.black87)),
-      //             accountEmail: Text("iliyasahmedr@gmail.com"),
-      //           )
-      //       ),
-      //       ListTile(leading: Icon(Icons.home) , title: Text("Home"), onTap: (){MySnackBar("Home End Drawer", context);},),
-      //       ListTile(leading: Icon(Icons.contact_emergency) ,title: Text("Contact Us"),onTap: (){MySnackBar("Contact End Drawer", context);}),
-      //       ListTile(leading: Icon(Icons.phone) ,title: Text("Phone"),onTap: (){MySnackBar("Phone End Drawer", context);}),
-      //       ListTile(leading: Icon(Icons.email) ,title: Text("Email"),onTap: (){MySnackBar("Email End Drawer", context);}),
-      //     ],
-      //   ),
-      // ),
+      endDrawer: Drawer(
+        child: ListView(
+          children: [
+      
+            DrawerHeader(
+                padding: EdgeInsets.all(0),
+                child: UserAccountsDrawerHeader(
+      
+                  currentAccountPicture: Image.network("https://media.istockphoto.com/id/1045035708/vector/duckling-simple-vector-icon.webp?s=2048x2048&w=is&k=20&c=Qx8IwvfRPlQoaElvo3oqs6cT7UFOLuD2ADjErUl_nS4="),
+                  decoration: BoxDecoration(color: Colors.blue),
+      
+                  accountName: Text("ILIYAS AHMED", style: TextStyle(color: Colors.black87)),
+                  accountEmail: Text("iliyasahmedr@gmail.com"),
+                )
+            ),
+            ListTile(leading: Icon(Icons.home) , title: Text("Home"), onTap: (){MySnackBar("Home End Drawer", context);},),
+            ListTile(leading: Icon(Icons.contact_emergency) ,title: Text("Contact Us"),onTap: (){MySnackBar("Contact End Drawer", context);}),
+            ListTile(leading: Icon(Icons.phone) ,title: Text("Phone"),onTap: (){MySnackBar("Phone End Drawer", context);}),
+            ListTile(leading: Icon(Icons.email) ,title: Text("Email"),onTap: (){MySnackBar("Email End Drawer", context);}),
+          ],
+        ),
+      ),
 
       //row
 
-      // body: Row(
-      //   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-      //   children: [
-      //     Container(height: 100, width: 100, child: Image.network("https://hips.hearstapps.com/hmg-prod/images/how-to-keep-ducks-call-ducks-1615457181.jpg")),
-      //     Container(height: 100, width: 100, child: Image.network("https://hips.hearstapps.com/hmg-prod/images/how-to-keep-ducks-call-ducks-1615457181.jpg")),
-      //     Container(height: 100, width: 100, child: Image.network("https://hips.hearstapps.com/hmg-prod/images/how-to-keep-ducks-call-ducks-1615457181.jpg"))
-      //   ],
-      // )
+      body: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: [
+          Container(height: 100, width: 100, child: Image.network("https://hips.hearstapps.com/hmg-prod/images/how-to-keep-ducks-call-ducks-1615457181.jpg")),
+          Container(height: 100, width: 100, child: Image.network("https://hips.hearstapps.com/hmg-prod/images/how-to-keep-ducks-call-ducks-1615457181.jpg")),
+          Container(height: 100, width: 100, child: Image.network("https://hips.hearstapps.com/hmg-prod/images/how-to-keep-ducks-call-ducks-1615457181.jpg"))
+        ],
+      ),
 
       //column
 
-      // body: Column(
-      //   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-      //   children: [
-      //     Container(height: 100, width: 100, child: Image.network("https://hips.hearstapps.com/hmg-prod/images/how-to-keep-ducks-call-ducks-1615457181.jpg")),
-      //     Container(height: 100, width: 100, child: Image.network("https://hips.hearstapps.com/hmg-prod/images/how-to-keep-ducks-call-ducks-1615457181.jpg")),
-      //     Container(height: 100, width: 100, child: Image.network("https://hips.hearstapps.com/hmg-prod/images/how-to-keep-ducks-call-ducks-1615457181.jpg"))
-      //   ],
-      // ),
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: [
+          Container(height: 100, width: 100, child: Image.network("https://hips.hearstapps.com/hmg-prod/images/how-to-keep-ducks-call-ducks-1615457181.jpg")),
+          Container(height: 100, width: 100, child: Image.network("https://hips.hearstapps.com/hmg-prod/images/how-to-keep-ducks-call-ducks-1615457181.jpg")),
+          Container(height: 100, width: 100, child: Image.network("https://hips.hearstapps.com/hmg-prod/images/how-to-keep-ducks-call-ducks-1615457181.jpg"))
+        ],
+      ),
 
 
 
       //alert
 
-      // body: Center(
-      //  child:  ElevatedButton(onPressed: (){MyAlertDialogue(context);}, child: Text("Alert !")),
-      // )
-      //
+      body: Center(
+       child:  ElevatedButton(onPressed: (){MyAlertDialogue(context);}, child: Text("Alert !")),
+      )
+      
 
       //Form
        body: Column(
@@ -229,7 +235,7 @@ var MyItems = [
       ),
 
 
-      //Dynamic List view Builder
+      //Dynamic List View Builder
       body: ListView.builder(
           itemCount: MyItems.length,
           itemBuilder: (context,index){
@@ -245,6 +251,27 @@ var MyItems = [
           },
       ),
 
+    //Dynamic Grid View Builder
+
+       body: GridView.builder(
+        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+            crossAxisCount: 2,
+            childAspectRatio: 1.5),
+          itemCount: MyItems.length,
+          itemBuilder: (context,index){
+            return GestureDetector(
+              onTap: (){},
+              child: Container(
+                margin: EdgeInsets.all(5),
+                width: double.infinity,
+                height: 200,
+                child: Image.network(MyItems[index]['img']!),
+              ),
+            );
+          },
+      ),
+
+      //toolbar
 
 
     );
