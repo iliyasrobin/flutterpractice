@@ -25,12 +25,14 @@ class MyApp extends StatelessWidget{
 class HomeActivity extends StatelessWidget{
    HomeActivity({super.key});
 
+  //snackbar
   MySnackBar(msg, context){
   return ScaffoldMessenger.of(context).showSnackBar(
     SnackBar(content: Text(msg))
   );
 }
 
+  //dynamic List/Grid View Objects
 var MyItems = [
     {"img": "https://upload.wikimedia.org/wikipedia/commons/b/bf/Bucephala-albeola-010.jpg", "title":"Iliyas"},
     {"img": "https://upload.wikimedia.org/wikipedia/commons/b/bf/Bucephala-albeola-010.jpg", "title":"Iliyas"},
@@ -40,6 +42,7 @@ var MyItems = [
   ];
   
 
+  //alert dialogue box
   MyAlertDialogue(context){
     showDialog(
         context: context,
