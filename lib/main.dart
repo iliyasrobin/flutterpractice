@@ -274,7 +274,49 @@ var MyItems = [
           },
       ),
 
-      //toolbar
+      // Tab Bar
+      return DefaultTabController(
+      length: 8,
+      child: Scaffold(
+        appBar: AppBar(title: Text("MyApp"),
+        backgroundColor: Colors.lightBlue,
+        bottom: TabBar(
+          isScrollable: true,
+          tabs: [
+            Tab(icon: Icon(Icons.home),text: 'Home'),
+            Tab(icon: Icon(Icons.search),text: 'search'),
+            Tab(icon: Icon(Icons.settings),text: 'settings'),
+            Tab(icon: Icon(Icons.contact_support),text: 'contact_support'),
+            Tab(icon:  Icon(Icons.alternate_email),text: 'alternate_email'),
+            Tab(icon:  Icon(Icons.comment_bank),text: 'comment_bank'),
+            Tab(icon: Icon(Icons.safety_check),text: 'safety_check'),
+            Tab(icon: Icon(Icons.dangerous),text: 'dangerous'),
+          ],
+        ),
+        
+        
+        ),
+
+        body: TabBarView(
+            children:[
+              HomeFrag(),
+              searchFrag(),
+              settingsFrag(),
+              contactFrag(),
+              emailFrag(),
+              contactFrag(),
+              safetyFrag(),
+              dangerousFrag(),
+                ],
+        ),
+        
+        
+       
+      ),
+    );
+
+
+      //
 
 
     );
