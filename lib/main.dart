@@ -316,7 +316,59 @@ var MyItems = [
     );
 
 
-      //
+      // Normal Navigation
+      class HomeActivity extends StatelessWidget {
+  HomeActivity({super.key});
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.blue,
+        title: Text("Home"),
+      ),
+
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.start,
+        children: [
+          ElevatedButton(onPressed: (){
+            Navigator.push(context, MaterialPageRoute(builder: (context)=>Activity1()));
+          }, child: Text("goto activity 1"),),
+          ElevatedButton(onPressed: (){
+            Navigator.push(context, MaterialPageRoute(builder: (context)=>Activity1()));
+          }, child: Text("goto activity 2")),
+        ],
+      ),
+    );
+  }
+}
+
+class Activity1 extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.blue,
+        title: Text("Activity 1"),
+      ),
+      
+    );
+  }
+}
+
+class Activity2 extends StatelessWidget {
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.blue,
+        title: Text("Activity 2"),
+      ),
+    );
+  }
+}
+      
+      // Pass data with Navigation
 
 
     );
