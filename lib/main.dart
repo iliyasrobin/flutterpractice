@@ -436,7 +436,24 @@ class Activity2 extends StatelessWidget {
 }
 
       // Card
+        body: Center(
 
+       child: Card(
+         shape: BeveledRectangleBorder(borderRadius: BorderRadius.circular(10)),
+         elevation: 80,
+         shadowColor: Colors.greenAccent,
+         color: Color.fromRGBO(31, 191, 151, 1),
+         child: SizedBox(
+           height: 200,
+           width: 200,
+           child: Center(
+             child: Text("MY CARD"),
+           ),
+         ),
+       )
+
+
+          // Circle Process
 
     );
   }
