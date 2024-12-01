@@ -369,6 +369,73 @@ class Activity2 extends StatelessWidget {
 }
       
       // Pass data with Navigation
+          body: Column(
+
+        mainAxisAlignment: MainAxisAlignment.start,
+        children: [
+          ElevatedButton(onPressed: (){
+            Navigator.push(context, MaterialPageRoute(builder: (context)=>Activity1("Home to 1")));
+          }, child: Text("goto activity 1"),),
+          ElevatedButton(onPressed: (){
+            Navigator.push(context, MaterialPageRoute(builder: (context)=>Activity2("Home to 2")));
+          }, child: Text("goto activity 2")),
+        ],
+      ),
+    );
+  }
+}
+
+class Activity1 extends StatelessWidget {
+  String msg;
+   Activity1(
+      this.msg,
+      {super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.blue,
+        title: Text(msg),
+      ),
+      body: Center(
+
+        child: ElevatedButton(onPressed: (){
+          Navigator.push(context, MaterialPageRoute(builder: (context)=>Activity2(" 1 to 2")));
+        }, child: Text("Goto Activity 2")
+        ),
+      ),
+      
+    );
+  }
+}
+
+class Activity2 extends StatelessWidget {
+  String msg2;
+   Activity2(
+      this.msg2,
+      {super.key});
+
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Colors.blue,
+        title: Text(msg2),
+      ),
+      body: Center(
+
+        child: ElevatedButton(onPressed: (){
+          Navigator.push(context, MaterialPageRoute(builder: (context)=>Activity1( "2 to 1")));
+        }, child: Text("Goto Activity 1")
+        ),
+      ),
+    );
+  }
+}
+
+      // Card
 
 
     );
