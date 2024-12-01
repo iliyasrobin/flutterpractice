@@ -453,7 +453,30 @@ class Activity2 extends StatelessWidget {
        )
 
 
-          // Circle Process
+          // Circle Progress
+          body: Center(
+
+       child: CircularProgressIndicator(
+         backgroundColor: Colors.greenAccent,
+         color: Colors.blue,
+         strokeWidth: 20,
+       ),
+       ),
+
+
+          // Linear Progress
+          body: Center(
+
+       child: LinearProgressIndicator(
+         backgroundColor: Colors.greenAccent,
+         color: Colors.blue,
+         minHeight: 50,
+         ),
+       ),
+
+
+        // Icons Class
+          
 
     );
   }
