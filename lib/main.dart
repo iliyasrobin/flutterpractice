@@ -475,7 +475,7 @@ class Activity2 extends StatelessWidget {
        ),
 
 
-        // Icons Class
+        // Updating
           
 
     );
