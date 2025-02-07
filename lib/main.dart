@@ -476,7 +476,7 @@ class Activity2 extends StatelessWidget {
 
 
         // single child scroll view
-          
+        //  SingleChildScrollView
 
     );
   }
